@@ -1,0 +1,86 @@
+# 使用Rmd撰写论文
+
+## 撰写中文论文
+
+我们使用胡悦老师编辑的template_cn.docx作为生成论文的模板，下文将逐一介绍各部分内容和注意事项。
+
+### Rmd输出部分设置
+
+```{r,eval=FALSE}
+title: "牦牛肉干风味差异分析"
+subtitle: "基于西藏自然环境和人文特征的综合讨论"
+author:  
+  - 李小狼^[作者信息：李小狼，男，本科生。地址：xxx；联系方式：xxx]
+  - 王小明
+output: 
+  bookdown::word_document2:
+    reference_docx: template_cn.docx
+fontsize: 12pt
+bibliography: lixiaolang.bib
+csl: american-political-science-association.csl
+link-citations: true
+abstract: |
+
+  **摘要**:  啦啦啦
+  
+  **关键词**：啦啦啦
+```
+
+`title`，`subtitle`分别为论文主、副标题，注意使用英文`""`将标题内容括起（以识别为文本）。当标题中包含英文双引号时，外层可用单引号`''`括起。
+
+`author`为论文作者。当有多位作者时，在每行前使用`-`标注，Rmarkdown将统一识别为作者名，并在word中纵向居中排布。`^[]`为脚注内容。
+
+`fontsize`为字体大小。
+
+`bibliography`为参考文献文件，我们使用zotero生成，将在**Zotero与Rmd**部分详细讲解。
+
+`csl`为参考文献生成标准的格式文件，上述代码使用APSA格式生成参考文献。
+
+`link-citations`为True时，将生成从文本引用指向参考文献的文本内超链接。
+
+`abstract`为文章摘要，`｜`表示以下部分全部为`abstract`内容。
+
+### Rmd正文部分设置
+```{r,eval=FALSE}
+# 引言
+
+牦牛肉干是全国人民喜爱的风味食品[@Yang2020; @Jia2020]
+
+# 牦牛肉干制作方法介绍
+
+## 风干法
+
+### 夏季风干法
+```
+
+一般正文最多使用三级标题。
+
+`[@xxx]`为生成引文，其生成格式由Zotero内Bibtex生成的Citekey决定，将在**Zotero与Rmd**部分详细讲解。
+
+此外，除文字外，Rmd正文内部可以插入代码块、图表等其他内容，可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/r-code.html)相关内容。
+
+### Rmd setup建议设置
+
+```{r,eval=FALSE}
+{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE, dpi = 300)
+options(digits = 3)
+
+
+if (!require(pacman)) install.packages("pacman")
+library(pacman)
+
+p_load(
+  flextable, # Visualization
+  # Applied
+  # dependency
+  haven,stringr, broom, tidyverse
+) # data wrangling # data wrangling
+
+# Functions preload
+set.seed(313)
+```
+
+其中，`knitr::opts_chunk$set`对正文部分是否显示源代码、汇报（警告）信息以及图像大小进行了设置（可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/r-code.html)相关内容。
+
+`pacman`包中的`p_load`先对包作`if (!require(tidyverse)) install.packages("tidyverse")`,再使用`library(tidyverse)`，能使代码更简洁。

@@ -1,0 +1,25 @@
+---
+title: "Summer RA Conclusion"
+author: "Yuyang Shi"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+
+---
+
+# Introduction
+
+本文件为2020年夏季学期胡悦老师RA项目中的方法总结，主要包括：
+
+1.  使用.Rmd撰写论文
+
+2.  Git
+
+3.  IRT
+
+4. Zotero与Rmd
+
+5. 使用pagedown制作简历
+
+6. bookdown基本使用方法
