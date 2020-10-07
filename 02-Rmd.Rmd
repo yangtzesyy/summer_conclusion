@@ -21,9 +21,9 @@ csl: american-political-science-association.csl
 link-citations: true
 abstract: |
 
-  **摘要**:  啦啦啦
+  **摘要**:  略略略
   
-  **关键词**：啦啦啦
+  **关键词**：略略略
 ```
 
 `title`，`subtitle`分别为论文主、副标题，注意使用英文`""`将标题内容括起（以识别为文本）。当标题中包含英文双引号时，外层可用单引号`''`括起。
@@ -84,3 +84,17 @@ set.seed(313)
 其中，`knitr::opts_chunk$set`对正文部分是否显示源代码、汇报（警告）信息以及图像大小进行了设置（可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/r-code.html)相关内容。
 
 `pacman`包中的`p_load`先对包作`if (!require(tidyverse)) install.packages("tidyverse")`,再使用`library(tidyverse)`，能使代码更简洁。
+
+##  撰写英文论文
+
+在bookdown输出部分中确定输出格式即可（不需要使用`template_cn.docx`,bookdown内部自带英文模板），例如：
+```{r,eval=F}
+output:
+  bookdown::pdf_document2:
+    fig_caption: yes
+    keep_tex: yes
+    toc: FALSE
+    latex_engine: xelatex
+```
+
+可参见[R Markdown: The Definitive Guide](https://bookdown.org/yihui/bookdown/output-formats.html)相关内容。
