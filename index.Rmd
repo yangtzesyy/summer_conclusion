@@ -4,6 +4,7 @@ author: "Yuyang Shi"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
+description: "Summer RA Conclusion"
 documentclass: book
 
 ---
@@ -16,10 +17,8 @@ documentclass: book
 
 2.  Git
 
-3.  IRT
+3. Zotero与Rmd
 
-4. Zotero与Rmd
+4. bookdown基本使用方法
 
-5. 使用pagedown制作简历
-
-6. bookdown基本使用方法
+5. 如何快速阅读论文

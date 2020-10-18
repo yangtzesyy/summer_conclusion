@@ -1,0 +1,12 @@
+# Bookdown
+
+同样的，我们参考[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/books.html)相关内容学习Bookdown。仅作补充说明：
+
+1. Bookdown中，各章节需要依照“num-name.Rmd”的方式命名。其中num决定章节先后顺序，保序即可。
+
+2. Bookdown中的Zotero引用与第三部分完全一致。
+
+3. 即使没有"_bookdown.yml"和"_output.yml"文件，Bookdown依然能按照default格式输出。但在与Github连接不稳定时，将上述文件储存在本地是有用的。
+
+
+

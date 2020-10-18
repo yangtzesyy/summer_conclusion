@@ -1,0 +1,11 @@
+# 如何快速阅读文献
+
+快速阅读文献应当尽可能按照「读题填空」的方式进行。即，在文章的各个部分（主要是Abstract、Conclusion以及文章各部分开头结尾段落）搜寻所需信息进行填空。主要包括以下内容：
+
+1. Object：文章主要研究对象，一般能在Abstract中找到。
+
+2. Method：采用的研究方法。包括视角（例如定性or定量，i.e. Econometrics），方法模型（i.e. ANOVA, Gravity Model)
+
+3. Findings：文章的主要argument
+
+4. Highlights：文章的亮点（例如工具变量的选择）
