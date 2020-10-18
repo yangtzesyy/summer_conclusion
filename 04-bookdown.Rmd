@@ -1,6 +1,106 @@
 # Bookdown
 
-同样的，我们参考[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/books.html)Chapter 12学习Bookdown。仅作补充说明：
+同样的，我们参考[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/books.html)Chapter 12学习Bookdown。
+
+以下为中文翻译版本
+
+## Bookdown包下载
+
+```{r packageDownload, eval=F}
+install.packages('bookdown')
+
+# or Github
+
+devtools::install_github('rstudio/bookdown')
+```
+
+## Bookdown project结构
+
+请在进行Bookdown书写时，首先创建一个新的project。Working directory中一般有以下部分：
+
+`index.Rmd`: Rmd的第一章节，包括整本书的格式设置和第一章内容
+
+`num-name.Rmd`:`num`决定`Bookdown`输出时的章节顺序，保序；`name`自己起名
+
+`_bookdown.yml`:输出格式逻辑调整，一般不用
+
+`_output.yml`:输出格式内容调整（例如书名），一般只需要更改全书书名
+
+`preamble.tex`和`style.css`:Latex和Css调整输出样式
+
+其他可能还有`.bib`（引用，见Zotero部分）。
+
+```{r structure, eval=F}
+directory/
+├──  index.Rmd
+├── 01-intro.Rmd
+├── 02-literature.Rmd
+├── 03-method.Rmd
+├── 04-application.Rmd
+├── 05-summary.Rmd
+├── 06-references.Rmd
+├── _bookdown.yml
+├── _output.yml
+├──  book.bib
+├──  preamble.tex
+├──  README.md
+└──  style.css
+```
+
+## `Index.Rmd`
+
+`Index.Rmd`是Bookdown中最重要的部分，其包括一个YAML和第一章内容，其中，YAML决定全书格式
+
+```{r YAML, eval=F}
+---
+title: "Summer RA Conclusion"
+author: "Yuyang Shi, Yokia Xu"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+description: "Summer RA Conclusion"
+documentclass: book
+bibliography: law-and-politics.bib,
+biblio-style: apalike
+---
+```
+
+其中，site和output决定全书输出格式，可参见详见[R Markdown: The Definitive Guide Chapter 12.4](https://bookdown.org/yihui/rmarkdown/bookdown-output.html)。一般而言，只需要更改`title`,`author`,`description`,`bibliography`和`biblio-style`。
+
+## `Num-name.Rmd`
+
+在随后的所有Rmd文件中，我们只需要使用markdown语法格式进行书写即可。
+
+## `_bookdown.yml`
+
+一般不使用，可以用`_bookdown.yml`限定输出`.Rmd`的范围和顺序，如
+```{r bookdown.yml, eval=F}
+
+rmd_files: ["index.Rmd", "02-git.Rmd", "01-Rmd.Rmd"]
+
+```
+
+将使Bookdown先输出`02-git.Rmd`，再生成`01-Rmd.Rmd`，且不输出其他内容。
+
+## `_output.yml`
+
+一般不使用，可以调整输出格式。详见[R Markdown: The Definitive Guide Chapter 12.4](https://bookdown.org/yihui/rmarkdown/bookdown-output.html)
+
+```{r output.yml, eval=F}
+bookdown::gitbook:
+  lib_dir: assets
+  split_by: section
+  config:
+    toolbar:
+      position: static
+bookdown::pdf_book:
+  keep_tex: yes
+bookdown::html_book:
+  css: toc.css
+```
+
+
+## 补充说明
 
 1. Bookdown中，各章节需要依照“num-name.Rmd”的方式命名。其中num决定章节先后顺序，保序即可。
 
