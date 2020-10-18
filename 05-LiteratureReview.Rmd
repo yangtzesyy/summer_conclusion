@@ -6,6 +6,8 @@
 
 2. Method：采用的研究方法。包括视角（例如定性or定量，i.e. Econometrics），方法模型（i.e. ANOVA, Gravity Model)
 
+3. Data: 文章使用数据。
+
 3. Findings：文章的主要argument
 
 4. Highlights：文章的亮点（例如工具变量的选择）
