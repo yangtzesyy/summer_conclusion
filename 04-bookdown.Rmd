@@ -7,3 +7,5 @@
 2. Bookdown中的Zotero引用与第三部分完全一致。
 
 3. 即使没有"_bookdown.yml"和"_output.yml"文件，Bookdown依然能按照default格式输出。但在与Github连接不稳定时，将上述文件储存在本地是有用的。
+
+4. 在完成Bookdown各章节书写后，需要分别knit才能得到完整文档（仅knit`index.Rmd`会有各章节目录，但不会有具体内容）。

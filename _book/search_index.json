@@ -1,3 +1,3 @@
 [
-["-.html", "Chapter 6 如何快速阅读文献", " Chapter 6 如何快速阅读文献 快速阅读文献应当尽可能按照「读题填空」的方式进行。即，在文章的各个部分（主要是Abstract、Conclusion以及文章各部分开头结尾段落）搜寻所需信息进行填空。主要包括以下内容： Object：文章主要研究对象，一般能在Abstract中找到。 Method：采用的研究方法。包括视角（例如定性or定量，i.e. Econometrics），方法模型（i.e. ANOVA, Gravity Model) Data: 文章使用数据。 Findings：文章的主要argument Highlights：文章的亮点（例如工具变量的选择） "]
+["bookdown.html", "Chapter 5 Bookdown", " Chapter 5 Bookdown 同样的，我们参考R Markdown: The Definitive GuideChapter 12学习Bookdown。仅作补充说明： Bookdown中，各章节需要依照“num-name.Rmd”的方式命名。其中num决定章节先后顺序，保序即可。 Bookdown中的Zotero引用与第三部分完全一致。 即使没有\"_bookdown.yml“和”_output.yml\"文件，Bookdown依然能按照default格式输出。但在与Github连接不稳定时，将上述文件储存在本地是有用的。 在完成Bookdown各章节书写后，需要分别knit才能得到完整文档（仅knitindex.Rmd会有各章节目录，但不会有具体内容）。 "]
 ]
