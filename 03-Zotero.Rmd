@@ -1,0 +1,141 @@
+# Zotero 文献管理 及 RMarkdown联动
+
+[英文教程](https://ikashnitsky.github.io/2019/zotero/)
+
+## ZOtero 5.0（及插件）的安装和注册 
+
+1.于官网[Zotero | Home](https://www.zotero.org/)进行下载并完成安装。（Chrome插件后期会自动安装）
+
+2.回到[官网](https://www.zotero.org/)进行注册,记住注册信息。
+
+3.回到软件端。打开软件：编辑——首选项——同步——设置，输入用户名和密码进行登陆。
+
+![登录信息](https://pic3.zhimg.com/v2-d786c49bc6573727422636d82eec45fe_r.jpg)
+
+4.下载插件
+[ZotFile](http://zotfile.com/)
+（用来管理PDF文件）和 [Better BibTeX](https://retorque.re/zotero-better-bibtex/)(将library导出为bib.格式与RMarkdown联动。)
+
+下载完成后进入软件-工具-插件-设置（齿轮标识）-[Install Add-on From File]-安装已经下载的两个插件。
+
+![插件安装](https://ikashnitsky.github.io/images/190314/plugin.png)
+
+
+## 修改首选项
+
+### 常规 general
+
+![general](https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic01_general.png?raw=true)
+
+### 同步 sync
+
+![同步](https://ikashnitsky.github.io/images/190314/pref-sync.png)
+
+
+选择自动同步，取消选择[同步全文]，（zotero只有300MB文件储存空间，可配置云端同步进行解决，见后文。）
+
+### 搜索与导出
+
+保持默认即可。
+
+### 引用
+
+针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。
+
+在[文字处理软件]中安装word/L-office加载项。
+
+![引用](https://ikashnitsky.github.io/images/190314/pref-cite.png)
+
+### 高级 
+
+文件储存位置：编辑-首选项-高级-文件和文件夹
+
+设置根目录和数据存储位置。
+
+根目录中存储文章信息及其附件（pdf），可酌情放在较空的硬盘中。
+
+数据储存位置仅包含zotero中的引录信息。
+
+后期如须多设备同步可将根目录文件夹进行云同步处理。
+
+![file position](https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic02_file_position.png?raw=true)
+
+
+### Better BibTeX 
+
+在安装Better BibTeX扩展程序后，将显示此选项卡。 安装扩展将整个书目库（或其某些部分）导出为纯.bib文本文件。 在使用rmarkdown撰写学术论文时，需要此步骤才能在RStudio中使用Zotero。
+
+变更Citation key 格式：（样例）[authEtAl:capitalize][year]
+
+[cite key 设置查阅手册](https://retorque.re/zotero-better-bibtex/citation-keys/)
+
+![cite key](https://ikashnitsky.github.io/images/190314/pref-bbt.png)
+
+
+## ZotFile 设置
+
+【工具】-【ZotFile preference】
+
+### General
+
+![general](https://ikashnitsky.github.io/images/190314/zf-general.png)
+
+在这里，我们定义了两条路径。 第一个是浏览器下载的文件的默认位置。 
+
+第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。
+
+下面的use subfolder defined by xxx的表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。
+
+### Tablet Settings
+
+与平板电脑链接进行PDF交换，略。
+
+### Renaming Rules
+
+设置附件的重命名格式。如：{%a_}{%y_}{%t}即表示作者_时间_文章名。
+
+![附件重命名](https://ikashnitsky.github.io/images/190314/zf-renaming.png)
+
+### 高级
+
+略。
+ 
+### 手动重命名附件
+
+在具体的条目中点击【附件】-【重命名附件】
+
+![rename](https://ikashnitsky.github.io/images/190314/att-pdf.png)
+
+
+## Zotero 与RMarkdown联动
+
+用插件 Better BibTeX 实现RMarkdown 中的自动引用功能。
+
+Better BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。
+
+![bib.导出](https://ikashnitsky.github.io/images/190314/bbt-export.png)
+
+选择持续更新。
+
+![update](https://ikashnitsky.github.io/images/190314/bbt-menu.png)
+
+输出的.bib文件应放置在我们要编织.rmd文件的目录中。 .bib的名称在.rmd的YAML标头中指定。示例如图。
+
+![示例](https://ikashnitsky.github.io/images/190314/yaml.png)
+
+关于R部分的更多信息请参考：
+
+[RStudio 手册](https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html)
+
+[相关章节](https://bookdown.org/yihui/bookdown/citations.html)
+
+或 [xieyihui的相关教程](https://bookdown.org/yihui/bookdown/citations.html)
+
+
+## 祝贺！你已经完成了设置，请奖励自己一只鸡腿！
+
+
+
+
+
+

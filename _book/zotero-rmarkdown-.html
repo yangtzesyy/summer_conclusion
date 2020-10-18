@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Zotero 文献管理 及 RMarkdown联动 | Summer RA Conclusion</title>
+  <meta name="description" content="Chapter 4 Zotero 文献管理 及 RMarkdown联动 | Summer RA Conclusion" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Zotero 文献管理 及 RMarkdown联动 | Summer RA Conclusion" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Chapter 4 Zotero 文献管理 及 RMarkdown联动 | Summer RA Conclusion" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Zotero 文献管理 及 RMarkdown联动 | Summer RA Conclusion" />
+  
+  <meta name="twitter:description" content="Chapter 4 Zotero 文献管理 及 RMarkdown联动 | Summer RA Conclusion" />
+  
+
+<meta name="author" content="Yuyang Shi, Yokia Xu" />
+
+
+<meta name="date" content="2020-10-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="git.html"/>
+<link rel="next" href="bookdown.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Summer RA Conclusion</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="-rmd-.html"><a href="-rmd-.html"><i class="fa fa-check"></i><b>2</b> 使用Rmd撰写论文</a><ul>
+<li class="chapter" data-level="2.1" data-path="-rmd-.html"><a href="-rmd-.html#撰写中文论文"><i class="fa fa-check"></i><b>2.1</b> 撰写中文论文</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="-rmd-.html"><a href="-rmd-.html#rmd输出部分设置"><i class="fa fa-check"></i><b>2.1.1</b> Rmd输出部分设置</a></li>
+<li class="chapter" data-level="2.1.2" data-path="-rmd-.html"><a href="-rmd-.html#rmd正文部分设置"><i class="fa fa-check"></i><b>2.1.2</b> Rmd正文部分设置</a></li>
+<li class="chapter" data-level="2.1.3" data-path="-rmd-.html"><a href="-rmd-.html#rmd-setup建议设置"><i class="fa fa-check"></i><b>2.1.3</b> Rmd setup建议设置</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="-rmd-.html"><a href="-rmd-.html#撰写英文论文"><i class="fa fa-check"></i><b>2.2</b> 撰写英文论文</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="git.html"><a href="git.html"><i class="fa fa-check"></i><b>3</b> Git</a></li>
+<li class="chapter" data-level="4" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html"><i class="fa fa-check"></i><b>4</b> Zotero 文献管理 及 RMarkdown联动</a><ul>
+<li class="chapter" data-level="4.1" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#zotero-5.0及插件的安装和注册"><i class="fa fa-check"></i><b>4.1</b> ZOtero 5.0（及插件）的安装和注册</a></li>
+<li class="chapter" data-level="4.2" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#修改首选项"><i class="fa fa-check"></i><b>4.2</b> 修改首选项</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#常规-general"><i class="fa fa-check"></i><b>4.2.1</b> 常规 general</a></li>
+<li class="chapter" data-level="4.2.2" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#同步-sync"><i class="fa fa-check"></i><b>4.2.2</b> 同步 sync</a></li>
+<li class="chapter" data-level="4.2.3" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#搜索与导出"><i class="fa fa-check"></i><b>4.2.3</b> 搜索与导出</a></li>
+<li class="chapter" data-level="4.2.4" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#引用"><i class="fa fa-check"></i><b>4.2.4</b> 引用</a></li>
+<li class="chapter" data-level="4.2.5" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#高级"><i class="fa fa-check"></i><b>4.2.5</b> 高级</a></li>
+<li class="chapter" data-level="4.2.6" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#better-bibtex"><i class="fa fa-check"></i><b>4.2.6</b> Better BibTeX</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#zotfile-设置"><i class="fa fa-check"></i><b>4.3</b> ZotFile 设置</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#general"><i class="fa fa-check"></i><b>4.3.1</b> General</a></li>
+<li class="chapter" data-level="4.3.2" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#tablet-settings"><i class="fa fa-check"></i><b>4.3.2</b> Tablet Settings</a></li>
+<li class="chapter" data-level="4.3.3" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#renaming-rules"><i class="fa fa-check"></i><b>4.3.3</b> Renaming Rules</a></li>
+<li class="chapter" data-level="4.3.4" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#高级-1"><i class="fa fa-check"></i><b>4.3.4</b> 高级</a></li>
+<li class="chapter" data-level="4.3.5" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#手动重命名附件"><i class="fa fa-check"></i><b>4.3.5</b> 手动重命名附件</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#zotero-与rmarkdown联动"><i class="fa fa-check"></i><b>4.4</b> Zotero 与RMarkdown联动</a></li>
+<li class="chapter" data-level="4.5" data-path="zotero-rmarkdown-.html"><a href="zotero-rmarkdown-.html#祝贺你已经完成了设置请奖励自己一只鸡腿"><i class="fa fa-check"></i><b>4.5</b> 祝贺！你已经完成了设置，请奖励自己一只鸡腿！</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="bookdown.html"><a href="bookdown.html"><i class="fa fa-check"></i><b>5</b> Bookdown</a></li>
+<li class="chapter" data-level="6" data-path="-.html"><a href="-.html"><i class="fa fa-check"></i><b>6</b> 如何快速阅读文献</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Summer RA Conclusion</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="zotero-文献管理-及-rmarkdown联动" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Zotero 文献管理 及 RMarkdown联动</h1>
+<p><a href="https://ikashnitsky.github.io/2019/zotero/">英文教程</a></p>
+<div id="zotero-5.0及插件的安装和注册" class="section level2">
+<h2><span class="header-section-number">4.1</span> ZOtero 5.0（及插件）的安装和注册</h2>
+<p>1.于官网<a href="https://www.zotero.org/">Zotero | Home</a>进行下载并完成安装。（Chrome插件后期会自动安装）</p>
+<p>2.回到<a href="https://www.zotero.org/">官网</a>进行注册,记住注册信息。</p>
+<p>3.回到软件端。打开软件：编辑——首选项——同步——设置，输入用户名和密码进行登陆。</p>
+<div class="figure">
+<img src="https://pic3.zhimg.com/v2-d786c49bc6573727422636d82eec45fe_r.jpg" alt="" />
+<p class="caption">登录信息</p>
+</div>
+<p>4.下载插件
+<a href="http://zotfile.com/">ZotFile</a>
+（用来管理PDF文件）和 <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a>(将library导出为bib.格式与RMarkdown联动。)</p>
+<p>下载完成后进入软件-工具-插件-设置（齿轮标识）-[Install Add-on From File]-安装已经下载的两个插件。</p>
+<div class="figure">
+<img src="https://ikashnitsky.github.io/images/190314/plugin.png" alt="" />
+<p class="caption">插件安装</p>
+</div>
+</div>
+<div id="修改首选项" class="section level2">
+<h2><span class="header-section-number">4.2</span> 修改首选项</h2>
+<div id="常规-general" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> 常规 general</h3>
+<div class="figure">
+<img src="https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic01_general.png?raw=true" alt="" />
+<p class="caption">general</p>
+</div>
+</div>
+<div id="同步-sync" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> 同步 sync</h3>
+<div class="figure">
+<img src="https://ikashnitsky.github.io/images/190314/pref-sync.png" alt="" />
+<p class="caption">同步</p>
+</div>
+<p>选择自动同步，取消选择[同步全文]，（zotero只有300MB文件储存空间，可配置云端同步进行解决，见后文。）</p>
+</div>
+<div id="搜索与导出" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> 搜索与导出</h3>
+<p>保持默认即可。</p>
+</div>
+<div id="引用" class="section level3">
+<h3><span class="header-section-number">4.2.4</span> 引用</h3>
+<p>针对参考文献格式的设置。点击[获取更多样式]进入Zotero远程引文格式库。引文格式也可以通过.csl本地文件进行导入，点击[+]。</p>
+<p>在[文字处理软件]中安装word/L-office加载项。</p>
+<div class="figure">
+<img src="https://ikashnitsky.github.io/images/190314/pref-cite.png" alt="" />
+<p class="caption">引用</p>
+</div>
+</div>
+<div id="高级" class="section level3">
+<h3><span class="header-section-number">4.2.5</span> 高级</h3>
+<p>文件储存位置：编辑-首选项-高级-文件和文件夹</p>
+<p>设置根目录和数据存储位置。</p>
+<p>根目录中存储文章信息及其附件（pdf），可酌情放在较空的硬盘中。</p>
+<p>数据储存位置仅包含zotero中的引录信息。</p>
+<p>后期如须多设备同步可将根目录文件夹进行云同步处理。</p>
+<div class="figure">
+<img src="https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic02_file_position.png?raw=true" alt="" />
+<p class="caption">file position</p>
+</div>
+</div>
+<div id="better-bibtex" class="section level3">
+<h3><span class="header-section-number">4.2.6</span> Better BibTeX</h3>
+<p>在安装Better BibTeX扩展程序后，将显示此选项卡。 安装扩展将整个书目库（或其某些部分）导出为纯.bib文本文件。 在使用rmarkdown撰写学术论文时，需要此步骤才能在RStudio中使用Zotero。</p>
+<p>变更Citation key 格式：（样例）[authEtAl:capitalize][year]</p>
+<p><a href="https://retorque.re/zotero-better-bibtex/citation-keys/">cite key 设置查阅手册</a></p>
+<div class="figure">
+<img src="https://ikashnitsky.github.io/images/190314/pref-bbt.png" alt="" />
+<p class="caption">cite key</p>
+</div>
+</div>
+</div>
+<div id="zotfile-设置" class="section level2">
+<h2><span class="header-section-number">4.3</span> ZotFile 设置</h2>
+<p>【工具】-【ZotFile preference】</p>
+<div id="general" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> General</h3>
+<div class="figure">
+<img src="https://ikashnitsky.github.io/images/190314/zf-general.png" alt="" />
+<p class="caption">general</p>
+</div>
+<p>在这里，我们定义了两条路径。 第一个是浏览器下载的文件的默认位置。</p>
+<p>第二条路径指向为全文PDF创建的本地目录，我将其命名为zotero-library，并与我们选择的外部云解决方案同步。</p>
+<p>下面的use subfolder defined by xxx的表示：根据paper的xxx来给论文分类（以再创建二级文件夹的方式） /%a的意思是按照作者名称分类。</p>
+</div>
+<div id="tablet-settings" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Tablet Settings</h3>
+<p>与平板电脑链接进行PDF交换，略。</p>
+</div>
+<div id="renaming-rules" class="section level3">
+<h3><span class="header-section-number">4.3.3</span> Renaming Rules</h3>
+<p>设置附件的重命名格式。如：{%a_}{%y_}{%t}即表示作者_时间_文章名。</p>
+<div class="figure">
+<img src="https://ikashnitsky.github.io/images/190314/zf-renaming.png" alt="" />
+<p class="caption">附件重命名</p>
+</div>
+</div>
+<div id="高级-1" class="section level3">
+<h3><span class="header-section-number">4.3.4</span> 高级</h3>
+<p>略。</p>
+</div>
+<div id="手动重命名附件" class="section level3">
+<h3><span class="header-section-number">4.3.5</span> 手动重命名附件</h3>
+<p>在具体的条目中点击【附件】-【重命名附件】</p>
+<div class="figure">
+<img src="https://ikashnitsky.github.io/images/190314/att-pdf.png" alt="" />
+<p class="caption">rename</p>
+</div>
+</div>
+</div>
+<div id="zotero-与rmarkdown联动" class="section level2">
+<h2><span class="header-section-number">4.4</span> Zotero 与RMarkdown联动</h2>
+<p>用插件 Better BibTeX 实现RMarkdown 中的自动引用功能。</p>
+<p>Better BibTeX提供了一种简便的方法，可以将Zotero的书目记录导出为纯.bib文本，并在记录更改后保持文件更新。只需右键单击Zotero中的集合，然后选择“导出集合”。</p>
+<div class="figure">
+<img src="https://ikashnitsky.github.io/images/190314/bbt-export.png" alt="" />
+<p class="caption">bib.导出</p>
+</div>
+<p>选择持续更新。</p>
+<div class="figure">
+<img src="https://ikashnitsky.github.io/images/190314/bbt-menu.png" alt="" />
+<p class="caption">update</p>
+</div>
+<p>输出的.bib文件应放置在我们要编织.rmd文件的目录中。 .bib的名称在.rmd的YAML标头中指定。示例如图。</p>
+<div class="figure">
+<img src="https://ikashnitsky.github.io/images/190314/yaml.png" alt="" />
+<p class="caption">示例</p>
+</div>
+<p>关于R部分的更多信息请参考：</p>
+<p><a href="https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html">RStudio 手册</a></p>
+<p><a href="https://bookdown.org/yihui/bookdown/citations.html">相关章节</a></p>
+<p>或 <a href="https://bookdown.org/yihui/bookdown/citations.html">xieyihui的相关教程</a></p>
+</div>
+<div id="祝贺你已经完成了设置请奖励自己一只鸡腿" class="section level2">
+<h2><span class="header-section-number">4.5</span> 祝贺！你已经完成了设置，请奖励自己一只鸡腿！</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="git.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bookdown.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["summer-conclusion-2.pdf", "summer-conclusion-2.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
