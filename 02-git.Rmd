@@ -1,18 +1,122 @@
 # Git
 
-本部分主要介绍Git。由于已经存在足够好的Git教程（参见[Get started with GitHub | Happy Git and GitHub for the useR](https://happygitwithr.com/)，仅作补充说明：
+本部分主要介绍Git。英文Git教程参见[Get started with GitHub | Happy Git and GitHub for the useR](https://happygitwithr.com/)
 
-1. 本教程的大部分Terminal代码，在Rstudio中均有可视化按钮替代（但学习代码依然是重要的）。
+## 介绍：Project
 
-2. Chapter 1-7属于基本认识和设置内容，在电脑上进行设置后不需要重复操作。
+创建Project是在使用R时基本功（想不通为啥各大教材和课都不先教create new project,以至于常年找不到文件在哪儿）。
 
-3. Chapter 8 与Rstudio内部的Diff功能相近。
+![NewProjectCreating](https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic03_CreateProject.png?raw=true)
 
-4. Chapter 9 为日常Git的主要操作流程。
 
-5. 如无必要，不需要学习SSH部分内容。
+在Rtudio的右上角,点击后选择`New Project`可以创建新的Project。一般来说，在创建**本地新项目时**选择`new directory`就行（相当于创建一个新文件夹）你应该将同一个项目的数据、图片、代码等一系列文件都置于一个Project下。这样能减少数据和代码丢失的可能性，同时在导入数据和图片时，路径也能变短（Project下，默认路径为working directory）。
 
-6. 在每次打开合作Project时，首先pull以更新到项目最新版本，并在合作过程中多使用branch，避免override。
+## 如何Clone他人公开的Github（读）
+
+我们能在有读取权限的repo中找到对应的`https`链接。
+
+![Githttps](https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic04_CloneProject.png?raw=true)
+
+在创建`New Project`时选择`Version Control`，`Git`并复制Https以克隆其他人的repo。
+
+## 如何创建一个自己的repo，并保持本地与Github的联动（单人版：写）
+
+(假设你已经有了自己的Github账号，R和Rstudio)
+
+我们需要完成自己的Rstudio与Github账号的联动工作，才能写入Github上的repo。这只需要设置一次，别担心。（[英文教程](https://happygitwithr.com/credential-caching.html#credential-caching)
+
+### 设置部分
+
+#### 得到Token
+
+首先，在github中创建一个token以表明身份，[按照步骤](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)操作即可。Token类似于密码，需要小心保管。
+
+#### 在Rtudio中储存账号信息
+
+现在，利用`credentials`包在R中储存Github账号信息。你需要将得到的Token输入到`set_github_pat()`中
+
+```{r credentials, eval=F}
+install.packages("credentials")
+
+library(credentials)
+
+set_github_pat(Your Token Here)
+```
+
+
+#### 在Rstudio中查看账号信息
+
+你可以利用`gitcreds`包查看储存的Github账号信息。
+
+```{r gitcreds, eval=F}
+
+library(gitcreds)
+
+gitcreds_set()
+```
+
+
+### 实现联动：Pull, Commit和Push
+
+建议读者首先在Github中创建一个新repo，并利用3.2的方法将其克隆到本地文件中，然后再进行操作。（这相当于Git中的New Project, Github First。其他两种方式（将电脑中存在的project上传到Github中，将Github中已经存在的Project下载到电脑中）在[happygitwithr](https://happygitwithr.com/new-github-first.html)有介绍。
+
+本章节讲Pull（同步云端数据），Commit（确认本地更改），Push（更改云端数据）三个部分。
+
+#### Pull：将Github中的repo读取并储存到本地
+
+利用3.2中的方法，将自己的repo下载到本地。
+
+#### Commit
+
+![git](https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic05-git.png?raw=true)
+
+在Rstudio的`Git`部分有Commit栏，点进去，它会显示本地数据与云端数据（Github上）的区别（图片左栏）。左上显示有变化的文件，下方逐栏说明区别。
+
+
+你可以使用stage确认变化（打勾），或使用unstage撤销更改。
+
+![commit](https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic06-commit.png?raw=true)
+
+在确认完更改后，你需要输入commit信息（一般而言是对更新的简要说明），并点击`commit`按钮确认更改
+
+#### Push
+
+点击绿色向上箭头按钮，将本地更改上传到Github
+
+
+## Git Family：如何实现与他人联动
+
+上部分的单人Github使用相当于一个大型网盘，主要用来备份数据，部分时候可以给其他人文件读取权限以方便分享。本部分在单人Github基础上，说明如何多人在同一个repo上工作。
+
+### 权限赋予：Github中的工作
+
+在Github的settings--Manage access部分，邀请你的朋友作为collaborator，和你一起工作（注意，Collaborator才有写权限）。
+
+### Pull：养成习惯
+
+在每次开始工作时，你需要先知道其他人对repo做了什么。一定要在每次工作前先将Github上的最新版本文件pull到本地中。
+
+![pull](https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic07-pull.png?raw=true)
+
+### Branch：避免Override
+
+你可以和朋友们各自创建自己的Branch（详细原理可见[happygitwithr](https://happygitwithr.com/git-branches.html)）。这相当于各自在不同的工作线上工作（因此不会将文件更改上传到master上）。我们仅需要将自己Branch中**完全确定**并**需要同他人共享**的部分上传到master上。
+
+![branch](https://github.com/yangtzesyy/summer_conclusion/blob/master/pictures/pic08-branch.png?raw=true)
+
+### Commit and Push
+
+这与之前没有什么两样。
+
+
+
+
+
+
+
+
+
+
 
 
 

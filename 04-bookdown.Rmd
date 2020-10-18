@@ -2,7 +2,6 @@
 
 同样的，我们参考[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/books.html)Chapter 12学习Bookdown。
 
-以下为中文翻译版本
 
 ## Bookdown包下载
 
@@ -69,7 +68,11 @@ biblio-style: apalike
 
 ## `Num-name.Rmd`
 
-在随后的所有Rmd文件中，我们只需要使用markdown语法格式进行书写即可。
+在随后的所有Rmd文件中，我们只需要使用markdown语法格式进行书写即可。(安利一下Typora！)
+
+所有的`Num-name.Rmd`都**必须包含一个一级标题**，如`# Bookdown`。
+
+为组织文章结构，我们可以在每个`Num-name.Rmd`中使用任意的二级、三级标题。但请不要使用四级及以下的标题
 
 ## `_bookdown.yml`
 
