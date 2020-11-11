@@ -40,7 +40,7 @@ install.packages("credentials")
 
 library(credentials)
 
-set_github_pat(Your Token Here)
+set_github_pat("Your Token Here")
 ```
 
 
